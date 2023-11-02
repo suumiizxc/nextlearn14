@@ -1,3 +1,7 @@
+import '@/app/ui/global.css';
+import { inter } from '@/app/ui/fonts';
+import NextTopLoader from 'nextjs-toploader';
+ 
 export default function RootLayout({
   children,
 }: {
@@ -5,7 +9,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <NextTopLoader />
+      <body className={`${inter.className} antialiased`}>{children}</body>
     </html>
   );
 }
